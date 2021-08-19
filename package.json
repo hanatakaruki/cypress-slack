@@ -7,8 +7,9 @@
     "nonGlobalStepDefinitions": true
   },
   "scripts": {
-    "cy:open": "./node_modules/.bin/cypress open",
-    "cy:run": "./node_modules/.bin/cypress run"
+   "cy:open": "./node_modules/.bin/cypress open",
+   "cy:run": "./node_modules/.bin/cypress run --browser chrome",
+   "cy:install": "./node_modules/.bin/cypress install"
   },
   "repository": {
     "type": "git",
