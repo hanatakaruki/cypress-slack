@@ -7,11 +7,9 @@ jobs:
       # replace with your preferred image
       - image: cimg/base:stable
     steps:
-      - cypress/setup:
-          yarn: true 
-          
-      - cypress/run:
-          yarn: true 
+    - run:
+        command: yarn cy:install
+        command: yarn cy:run
 
 workflows:
   example-workflow:
