@@ -175,21 +175,6 @@ jobs:
 workflows:
   e2e-workflow:
     jobs:
-      - hold:
-          type: approval
-          filters:
-            branches:
-              only:
-                - main
-      - e2e-test:
-          context: E2ETests
-          requires:
-            - hold
-          filters:
-            branches:
-              only:
-                - main
-    jobs:
       - e2e-test:
           context: E2ETests
           filters:
