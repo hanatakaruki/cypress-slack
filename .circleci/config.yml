@@ -1,8 +1,22 @@
 version: 2.1
 orbs:
-  cypress: cypress-io/cypress@1
+  cypress: cypress-io/cypress@1.29.0
 workflows:
   build:
-    jobs:
-      - cypress/run:
-          yarn: true
+jobs:
+  example-job:
+    docker:
+      # replace with your preferred image
+      - image: cimg/base:stable
+    steps:
+      - cypress/install:
+          yarn: true 
+          install-command: yarn install 
+
+workflows:
+    example-workflow:
+      jobs:
+        - cypress/run:
+            browser: chrome 
+            yarn: true 
+            timeout: '60000' 
