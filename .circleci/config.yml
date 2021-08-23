@@ -1,17 +1,12 @@
 version: 2.1
 orbs:
-<<<<<<< HEAD
   cypress: cypress-io/cypress@1.7.0
 
-=======
-  cypress: cypress-io/cypress@1
->>>>>>> 9b9e46f350a0925b67ca326ebe8069de7ccbf306
 workflows:
   build:
     jobs:
       - cypress/run:
-<<<<<<< HEAD
-          command: "npm run report" Tests run here
+          command: npm run report Tests run here
           store_artifacts: true
           post-steps:
             - store_artifacts:
@@ -40,7 +35,3 @@ workflows:
                 path: mochawesome-report
             - store_test_results:
                 path: cypress/results
-=======
-          executor: cypress/base-10
-          yarn: true
->>>>>>> 9b9e46f350a0925b67ca326ebe8069de7ccbf306
