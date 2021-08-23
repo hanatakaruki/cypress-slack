@@ -34,4 +34,8 @@ workflows:
             - store_artifacts:
                 path: mochawesome-report
             - store_test_results:
+<<<<<<< HEAD
                 path: cypress/results
+=======
+                path: cypress/results
+>>>>>>> 44231a47a47477cf00d617b1606f8ea625d1ad05
