@@ -1,7 +1,9 @@
 {
+  "chromeWebSecurity": false,
   "testFiles": "**/*.{feature,features}",
   "reporter": "cypress-multi-reporters",
   "reporterOptions": {
     "configFile": "reporterOpts.json"
-  }
+  },
+  "projectId": "pkz5h5"
 }

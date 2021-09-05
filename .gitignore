@@ -1,3 +1,6 @@
 node_modules
 mochareports
+mochawesome-report
 cypress/reports
+cypress/screenshots
+cypress/videos

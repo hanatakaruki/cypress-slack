@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 0,
-    "start": "2021-08-19T09:26:48.247Z",
-    "end": "2021-08-19T09:26:54.475Z",
-    "duration": 6228,
+    "failures": 1,
+    "start": "2021-08-23T10:01:34.800Z",
+    "end": "2021-08-23T10:02:01.487Z",
+    "duration": 26687,
     "testsRegistered": 1,
-    "passPercent": 100,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "f95f23e4-43d3-403b-87c7-61a17aceecee",
+      "uuid": "811a0902-a72d-40f6-9299-efc8bae0309a",
       "title": "",
       "fullFile": "cypress/integration/Google.feature",
       "file": "cypress/integration/Google.feature",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "4d90f53d-9262-452b-8234-01153b78f202",
+          "uuid": "93b93809-bfa0-4434-9c31-73cbb098f3ef",
           "title": "Google Main Page",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,33 @@
               "title": "Opening a search engine page",
               "fullTitle": "Google Main Page Opening a search engine page",
               "timedOut": null,
-              "duration": 2308,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "duration": 10476,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
-              "err": {},
-              "uuid": "c51e58ce-8d0d-4f7a-9856-744808fa7db3",
-              "parentUUID": "4d90f53d-9262-452b-8234-01153b78f202",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'Google' to include 'Yahoo'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'Google' to include 'Yahoo'\n    at Context.eval (https://www.google.com/__cypress/tests?p=cypress/integration/Google.feature:44:14)\n    at Context.resolveAndRunStepDefinition (https://www.google.com/__cypress/tests?p=cypress/integration/Google.feature:12296:29)\n    at Context.eval (https://www.google.com/__cypress/tests?p=cypress/integration/Google.feature:11617:35)",
+                "diff": null
+              },
+              "uuid": "8e2ebd5b-6ec8-4a1b-b510-154f753969c9",
+              "parentUUID": "93b93809-bfa0-4434-9c31-73cbb098f3ef",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "c51e58ce-8d0d-4f7a-9856-744808fa7db3"
+          "passes": [],
+          "failures": [
+            "8e2ebd5b-6ec8-4a1b-b510-154f753969c9"
           ],
-          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2308,
+          "duration": 10476,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

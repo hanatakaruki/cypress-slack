@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2021-08-23T09:11:57.405Z",
-    "end": "2021-08-23T09:12:04.710Z",
-    "duration": 7305,
+    "start": "2021-09-05T22:33:52.848Z",
+    "end": "2021-09-05T22:34:16.511Z",
+    "duration": 23663,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,27 +18,27 @@
   },
   "results": [
     {
-      "uuid": "422918fc-54e3-4ebe-b2a5-8d1b0481305f",
+      "uuid": "30727681-8211-49e3-b709-06c0c136b201",
       "title": "",
-      "fullFile": "cypress/integration/Google.feature",
-      "file": "cypress/integration/Google.feature",
+      "fullFile": "cypress/integration/firstUser.feature",
+      "file": "cypress/integration/firstUser.feature",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "3396abad-6b9f-473d-8273-a49b60d00cbb",
-          "title": "Google Main Page",
+          "uuid": "de950996-d0c8-4980-b4d6-15696bd7a1b1",
+          "title": "Socket.io demo as first user",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Opening a search engine page",
-              "fullTitle": "Google Main Page Opening a search engine page",
+              "title": "Success set name and start chatting",
+              "fullTitle": "Socket.io demo as first user Success set name and start chatting",
               "timedOut": null,
-              "duration": 3329,
+              "duration": 19887,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
               "err": {},
-              "uuid": "9f730824-c85f-43be-8fb3-928e4df49768",
-              "parentUUID": "3396abad-6b9f-473d-8273-a49b60d00cbb",
+              "uuid": "3ccc4446-7292-485e-8832-9d12c8ec8e38",
+              "parentUUID": "de950996-d0c8-4980-b4d6-15696bd7a1b1",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "9f730824-c85f-43be-8fb3-928e4df49768"
+            "3ccc4446-7292-485e-8832-9d12c8ec8e38"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3329,
+          "duration": 19887,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

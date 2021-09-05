@@ -18,3 +18,38 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+after(() => {
+  let reportedTests
+  let url = 'https://api.slack.com/apps/A0115472K32/incoming-webhook'
+  const findTests = suite => {
+    suite.tests.forEach(test => {
+      if (test.state === "failed") {
+        reportedTests = {
+          "username": "Report notifier",
+          "text": "New Report  <!here>",
+          "attachments": [{
+            "color": "#FF0000",
+            "fields": [{
+                "title": test.parent.title + " " + test.title,
+                "value": test.state,
+                "short": true
+              }
+
+            ]
+
+          }]
+        }
+        cy.request({
+          method: 'POST',
+          url: url,
+          followRedirect: false,
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: reportedTests
+        })
+      }
+    })
+  }
+})
