@@ -7,9 +7,9 @@
     "nonGlobalStepDefinitions": true
   },
   "scripts": {
-   "cy:open": "./node_modules/.bin/cypress open",
-   "cy:run": "./node_modules/.bin/cypress run --browser chrome",
-   "cy:install": "./node_modules/.bin/cypress install"
+    "cy:open": "./node_modules/.bin/cypress open",
+    "cy:run": "./node_modules/.bin/cypress run --record --key 011f0005-86d9-4b84-b0b8-fca3fcef02d3 --browser chrome --parallel --ci-build-id BUILD_NUMBER",
+    "cy:install": "./node_modules/.bin/cypress install"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
   "devDependencies": {
     "cypress": "^8.3.0",
     "cypress-cucumber-preprocessor": "^4.2.0",
+    "cypress-iframe": "^1.0.1",
     "cypress-multi-reporters": "^1.5.0",
     "cypress-slack-reporter": "^1.2.1",
     "mochawesome": "^6.2.2",
