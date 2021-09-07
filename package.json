@@ -8,7 +8,7 @@
   },
   "scripts": {
     "cy:open": "./node_modules/.bin/cypress open",
-    "cy:run": "./node_modules/.bin/cypress run --record --key 011f0005-86d9-4b84-b0b8-fca3fcef02d3 --browser chrome --parallel --ci-build-id BUILD_NUMBER",
+    "cy:run": "./node_modules/.bin/cypress run --record --key 011f0005-86d9-4b84-b0b8-fca3fcef02d3",
     "cy:install": "./node_modules/.bin/cypress install"
   },
   "repository": {
