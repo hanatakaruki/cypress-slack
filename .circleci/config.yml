@@ -5,7 +5,7 @@ workflows:
   build:
     jobs:
       - cypress/install
-      - cypress/run:
+      - cypress/run --record --key 011f0005-86d9-4b84-b0b8-fca3fcef02d3:
           requires:
             - cypress/install
           record: true
